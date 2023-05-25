@@ -1,0 +1,8 @@
+{
+  "slug": "bloom-filter",
+  "title": "Bloom filter membership",
+  "description": "Provide bounded approximate membership with mergeable bit arrays.",
+  "category": "systems",
+  "demo_args": [],
+  "expected_exit": 0
+}
