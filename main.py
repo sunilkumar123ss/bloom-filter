@@ -37,3 +37,12 @@ class BloomFilter:
 
     def stats(self):
         return {'bits': self.bits, 'hashes': self.hashes, 'bytes': len(self.data), 'set_bits': sum((bin(b).count('1') for b in self.data))}
+
+def demo():
+    f = BloomFilter(100, 0.01)
+    for value in ['synthetic-a', 'synthetic-b', 'synthetic-c']:
+        f.add(value)
+    return {**f.stats(), 'membership': {value: f.contains(value) for value in ['synthetic-a', 'unseen-example']}, 'positive_means': 'possibly present'}
+if __name__ == '__main__':
+    argparse.ArgumentParser(description=__doc__).parse_args()
+    print(json.dumps(demo(), indent=2))
