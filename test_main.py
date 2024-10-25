@@ -15,6 +15,10 @@ class BloomTests(unittest.TestCase):
             f.add(value)
         self.assertTrue(all((f.contains(str(i)) for i in range(200))))
 
+    def test_empty_has_no_members(self):
+        f = m.BloomFilter()
+        self.assertFalse(f.contains('a'))
+        self.assertEqual(f.stats()['set_bits'], 0)
 
 
 
