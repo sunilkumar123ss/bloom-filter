@@ -20,6 +20,14 @@ class BloomTests(unittest.TestCase):
         self.assertFalse(f.contains('a'))
         self.assertEqual(f.stats()['set_bits'], 0)
 
+    def test_merge_preserves_both_sets(self):
+        a = m.BloomFilter()
+        b = m.BloomFilter()
+        a.add('left')
+        b.add('right')
+        a.merge(b)
+        self.assertTrue(a.contains('left'))
+        self.assertTrue(a.contains('right'))
 
 
 

@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 6 of 13. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 7 of 13. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -18,7 +18,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 4 | 2024-05-25T10:09:30+05:30 | add the deterministic demonstration and command-line entry point (present) |
 | 5 | 2024-07-09T18:40:04+05:30 | test no false negatives (present) |
 | 6 | 2024-10-25T09:17:35+05:30 | test empty has no members (present) |
-| 7 | 2025-01-09T13:26:00+05:30 | test merge preserves both sets (later stage) |
+| 7 | 2025-01-09T13:26:00+05:30 | test merge preserves both sets (present) |
 | 8 | 2025-05-14T19:30:43+05:30 | test incompatible merge rejected (later stage) |
 | 9 | 2025-06-28T12:25:55+05:30 | test duplicate is idempotent (later stage) |
 | 10 | 2025-11-28T17:45:04+05:30 | test invalid parameters (later stage) |
