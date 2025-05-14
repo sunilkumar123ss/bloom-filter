@@ -29,6 +29,9 @@ class BloomTests(unittest.TestCase):
         self.assertTrue(a.contains('left'))
         self.assertTrue(a.contains('right'))
 
+    def test_incompatible_merge_rejected(self):
+        with self.assertRaises(ValueError):
+            m.BloomFilter(10).merge(m.BloomFilter(100))
 
 
 if __name__ == '__main__':
