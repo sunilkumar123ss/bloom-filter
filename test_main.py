@@ -33,6 +33,12 @@ class BloomTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             m.BloomFilter(10).merge(m.BloomFilter(100))
 
+    def test_duplicate_is_idempotent(self):
+        f = m.BloomFilter()
+        f.add('x')
+        before = bytes(f.data)
+        f.add('x')
+        self.assertEqual(bytes(f.data), before)
 
 if __name__ == '__main__':
     unittest.main()
