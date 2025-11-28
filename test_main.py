@@ -40,5 +40,9 @@ class BloomTests(unittest.TestCase):
         f.add('x')
         self.assertEqual(bytes(f.data), before)
 
+    def test_invalid_parameters(self):
+        for args in [{'expected_items': 0}, {'expected_items': True}, {'false_positive_rate': 1}, {'false_positive_rate': float('nan')}]:
+            with self.assertRaises(ValueError):
+                m.BloomFilter(**args)
 if __name__ == '__main__':
     unittest.main()
